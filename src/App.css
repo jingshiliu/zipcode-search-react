@@ -4,3 +4,14 @@
     color: white;
     text-align: center;
 }
+
+.searchField{
+    padding: 2em 0;
+}
+
+.searchField input{
+    width: 100%;
+    margin-top: 0.5em;
+    border: 1px solid grey;
+    border-radius: 0.2em;
+}
