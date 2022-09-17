@@ -9,10 +9,10 @@ function getInput() {
 
 
 function City({cityInfo}) {
-  return <div>
-    <div>{cityInfo['City']}, {cityInfo['State']}</div>
-    <ul>
-      <li>State: {cityInfo.City}</li>
+  return <div className="border rounded my-3">
+    <div className="bg-light px-3 py-2  border-bottom rounded-top ">{cityInfo['City']}, {cityInfo['State']}</div>
+    <ul className="py-3 px-5 pb-2">
+      <li>State: {cityInfo.State}</li>
       <li>Location: ({cityInfo['Lat']}, {cityInfo['Long']})</li>
       <li>Population (estimated): {cityInfo['EstimatedPopulation']}</li>
       <li>Total Wages: {cityInfo['TotalWages']}</li>
@@ -47,7 +47,7 @@ function App() {
   if(cityList.length > 0){
     cityDisplaySection = cityList.map(city => <City cityInfo={city} />)
   }else{
-    cityDisplaySection = "No results found";
+    cityDisplaySection = <strong>No results found</strong>;
   }
   return (
     <div className="App">
