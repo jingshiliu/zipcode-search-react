@@ -9,7 +9,7 @@ function getInput() {
 
 
 function City({cityInfo}) {
-  return <div className="border rounded my-3">
+  return <div className="border rounded mt-5">
     <div className="bg-light px-3 py-2  border-bottom rounded-top ">{cityInfo['City']}, {cityInfo['State']}</div>
     <ul className="py-3 px-5 pb-2">
       <li>State: {cityInfo.State}</li>
@@ -22,7 +22,7 @@ function City({cityInfo}) {
 }
 
 function ZipSearchField({ setCityList }) {
-  return <div className="searchField ">
+  return <div className="mt-5 ">
     <label for="zipCodeInput">Zip code: </label>
     <br />
     <input className="form-control border rounded" id="zipCodeInput" type="text" placeholder="Enter a zipcode" onChange={
